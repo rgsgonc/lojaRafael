@@ -1,0 +1,14 @@
+body {
+    padding-top: 50px;
+}
+
+.principal {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.cabecalho{
+	font-size: 20px;
+	background-color: #000000;
+	text-align: center;
+}
