@@ -1,31 +1,40 @@
 <div class="container">
-  <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-    <div class="panel panel-info" >
+			<div class="row main">
+				<div class="panel-heading">
+	               <div class="panel-title text-center">
+	               		<h1 class="title">AKA Store</h1>
+	               		<hr />
+	               	</div>
+	            </div>
+				<div class="main-login main-center">
+					<form class="form-horizontal" method="post" action="#">
+						<div class="form-group">
+							<label for="username" class="cols-sm-2 control-label">Username</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+								</div>
+							</div>
+						</div>
 
-      <div class="panel-heading">
-        <div class="panel-title">Login</div>
-      </div>
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+								</div>
+							</div>
+						</div>
 
-      <div style="padding-top:30px" class="panel-body" >
-        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
-          <form id="loginform" class="form-horizontal" role="form" action="login.php" method="post">
-            <div style="margin-bottom: 25px" class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input id="login-username" type="text" class="form-control" name="email" value="" placeholder="E-mail">
-            </div>
-
-            <div style="margin-bottom: 25px" class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                <input id="login-password" type="password" class="form-control" name="senha" placeholder="Senha">
-            </div>
-
-            <div style="margin-top:10px" class="form-group">
-              <div class="col-sm-12 controls">
-                 <td><button class="btn btn-primary">Logar</button></td>
-              </div>
-            </div>
-          </form>
-      </div>
-    </div>
-  </div>
-</div>
+						<div class="form-group ">
+							<button type="button" class="btn btn-primary btn-lg btn-block login-button">Sign in</button>
+						</div>
+						<div class="login-register">
+				            <a href="create_account.php">Create account</a> or <a href="reset_password.php">reset password</a>
+				         </div>
+					</form>
+				</div>
+			</div>
+		</div>
