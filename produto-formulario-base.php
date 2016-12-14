@@ -17,8 +17,13 @@
 </tr>
 
 <tr>
-  <td></td>
+  <td>Usado:</td>
   <td><input type="checkbox" name="usado" <?=$usado?>value="true">Usado</td>
+</tr>
+
+<tr>
+  <td>Vendido:</td>
+  <td><input type="checkbox" name="vendido" <?=$vendido?>value="true">Vendido</td>
 </tr>
 
 <tr>

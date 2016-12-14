@@ -13,7 +13,13 @@
       $usado = "false";
     }
 
-    if(alteraProduto($conexao, $id,$nome, $preco, $descricao, $categoria_id,$usado)){ ?>
+    if(array_key_exists('vendido', $_POST)){
+      $vendido = "true";
+    }else{
+      $vendido = "false";
+    }
+
+    if(alteraProduto($conexao, $id,$nome, $preco, $descricao, $categoria_id,$usado,$vendido)){ ?>
       <p class="alert-success">Produto <?= $nome?>,<?=$preco ?> foi alterado.</p>
       <?php } else {
         $msg = mysqli_error($conexao);

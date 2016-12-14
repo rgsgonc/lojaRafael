@@ -12,11 +12,11 @@ $mail-> Port = 587;
 $mail->SMTPSecure = 'tls';
 $mail->SMTPAuth = true;
 $mail->Username = "rgs.gonc@gmail.com";
-$mail->Password = "Rrg017nm*"; //aqui colocar a senha do email.
+$mail->Password = "********"; //aqui colocar a senha do email.
 
 $mail->setFrom ("rgs.gonc@gmail.com", "AKA Store");
 $mail->addAddress("rgs.gonc@gmail.com");
-$mail->Subject = "Contato AKA Store";
+$mail->Subject = "Contato AKA Store"; //titulo do email.
 $mail->msgHTML ("<html>De: {$nome}<br/>Email: {$email}<br/>Mensagem: {$mensagem}</html>");
 $mail->AltBody = "De: {$nome}\nEmail: {$email}\n Mensagem: {$mensagem}";
 

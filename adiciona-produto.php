@@ -12,13 +12,18 @@
       $usado = "false";
     }
 
-    if(insereProduto($conexao, $nome, $preco, $descricao, $categoria_id,$usado)){ ?>
-      <p class="alert-success">Produto <?= $nome?>,<?=$preco ?> foi adicionado.</p>
+    if(array_key_exists('vendido', $_POST)){
+      $vendido = "true";
+    }else{
+      $vendido = "false";
+    }
+
+    if(insereProduto($conexao, $nome, $preco, $descricao, $categoria_id,$usado,$vendido)){ ?>
+      <p class="alert-success"> <?= $nome?> foi adicionado com sucesso. </p>
       <?php } else {
         $msg = mysqli_error($conexao);
       ?>
       <p class="alert-danger">Produto <?= $nome?> não foi adicionado: <?=$msg?></p>
-
       <?php
       }
       ?>

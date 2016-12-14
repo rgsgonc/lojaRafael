@@ -1,11 +1,22 @@
-CREATE DATABASE loja;
+CREATE DATABASE IF NOT EXISTS loja;
 USE loja;
 
-CREATE TABLE produtos (id integer auto_increment primary key, nome varchar (255), preco double, descricao text, categoria_id integer, usado boolean default false);
+CREATE TABLE IF NOT EXISTS produtos (
+id integer auto_increment primary key,
+nome varchar (255), preco double,
+descricao text,
+categoria_id integer,
+usado boolean default false,
+vendido boolean default false);
 
-CREATE TABLE categorias (id integer auto_increment primary key, nome varchar (255));
+CREATE TABLE IF NOT EXISTS categorias (
+id integer auto_increment primary key,
+nome varchar (255));
 
-CREATE TABLE usuarios (id integer auto_increment primary key, email varchar (255),senha varchar(255));
+CREATE TABLE IF NOT EXISTS usuarios (
+id integer auto_increment primary key,
+email varchar (255),
+senha varchar(255));
 
 
 INSERT INTO categorias (nome) values ("Alimento");

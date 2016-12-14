@@ -6,6 +6,7 @@ $id = $_GET['id'];
 $produto = buscaProduto($conexao, $id);
 $categorias = listaCategorias($conexao);
 $usado = $produto['usado'] ? "checked='checked'" : "";
+$vendido = $produto['vendido'] ? "checked='checked'" : "";
 ?>
 
         <h1>Alterando Produto</h1>

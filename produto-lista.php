@@ -1,8 +1,8 @@
 <?php require_once("cabecalho.php");
 require_once("banco-produto.php");
 ?>
-
-<table class="table table-striped table-bordered">
+<div class="testefundo">
+<table class="table">
 <tr>
   <th>Nome</th>
   <th>Valor</th>
@@ -21,7 +21,7 @@ require_once("banco-produto.php");
       <td><?= $produto['preco'] ?></td>
       <td><?= substr($produto['descricao'], 0,40) ?></td>
       <td><?= $produto['categoria_nome']?></td>
-      <td><a class="btn btn-primary" href="produto-altera-formulario.php?id=<?=$produto['id']?>">Alterar</a></td>
+      <td><a class="btn btn-primary btn" href="produto-altera-formulario.php?id=<?=$produto['id']?>">Alterar</a></td>
       <td>
         <form action="remove-produto.php" method="post">
           <input type="hidden" name="id" value="<?=$produto['id']?>">
@@ -30,8 +30,11 @@ require_once("banco-produto.php");
       </td>
     </tr>
 
+
+
     <?php
       endforeach
     ?>
 </table>
+</div>
 <?php include("rodape.php"); ?>

@@ -9,13 +9,13 @@ function listaProdutos($conexao){
   return $produtos;
 }
 
-function insereProduto($conexao, $nome, $preco, $descricao, $categoria_id,$usado){
-    $query = "INSERT INTO produtos (nome, preco, descricao, categoria_id,usado) values ('{$nome}', {$preco}, '{$descricao}' , {$categoria_id}, {$usado})";
+function insereProduto($conexao, $nome, $preco, $descricao, $categoria_id,$usado,$vendido){
+    $query = "INSERT INTO produtos (nome, preco, descricao, categoria_id,usado,vendido) values ('{$nome}', {$preco}, '{$descricao}' , {$categoria_id}, {$usado}, {$vendido})";
     return mysqli_query($conexao,$query);
 }
 
-function alteraProduto($conexao, $id,$nome, $preco, $descricao, $categoria_id,$usado){
-    $query = "UPDATE produtos SET nome = '{$nome}', preco = {$preco}, descricao = '{$descricao}', categoria_id = {$categoria_id},usado = {$usado} WHERE id = {$id}";
+function alteraProduto($conexao, $id,$nome, $preco, $descricao, $categoria_id,$usado,$vendido){
+    $query = "UPDATE produtos SET nome = '{$nome}', preco = {$preco}, descricao = '{$descricao}', categoria_id = {$categoria_id},usado = {$usado}, vendido = {$vendido} WHERE id = {$id}";
     return mysqli_query($conexao,$query);
 }
 
@@ -29,5 +29,6 @@ function buscaProduto($conexao, $id){
   $resultado = mysqli_query($conexao,$query);
   return mysqli_fetch_assoc($resultado);
 }
+
 
 ?>
